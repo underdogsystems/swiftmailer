@@ -17,6 +17,7 @@
  * @subpackage Events
  * @author Chris Corbyn
  */
+#[\AllowDynamicProperties]
 class Swift_Events_EventObject implements Swift_Events_Event
 {
   

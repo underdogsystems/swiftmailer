@@ -68,7 +68,9 @@ class Swift_KeyCache_DiskKeyCache implements Swift_KeyCache
   {
     $this->_stream = $stream;
     $this->_path = $path;
-    $this->_quotes = get_magic_quotes_runtime();
+    if (version_compare(PHP_VERSION, '7.4.0', '<')) {
+      $this->_quotes = get_magic_quotes_runtime();
+    }
   }
 
   /**
